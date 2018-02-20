@@ -13,3 +13,23 @@ dotnet run --project DotNetCoreSampleApi
 ```
 dotnet test DotNetCoreSampleApi.Tests
 ```
+
+## Using Docker
+
+### Build the API image
+
+```
+docker build -t aspnetapp DotNetCoreSampleApi
+```
+
+### Run the API image
+
+```
+docker run -d -p 8080:80 --name app aspnetapp
+```
+
+### Test the API using docker-compose
+
+```
+docker-compose -f docker-compose.unittests.yml run --rm unittests
+```
