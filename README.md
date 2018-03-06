@@ -35,3 +35,5 @@ docker run -d -p 8080:80 --name app aspnetapp
 ```
 docker-compose -f docker-compose.unittests.yml run --rm unittests
 ```
+
+Test for CI
